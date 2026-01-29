@@ -23,3 +23,32 @@ To calculate the average, divide the sum you calculated before by the length of 
 Call the function with the totals array.
 */
 
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]; 
+const tips = [];
+const totals = [];
+
+const calcTip = (bill) => {
+    if (bill >= 50 && bill <= 300) {
+        return bill * .15;
+    } else {
+        return bill * .20;
+    }
+}
+
+for(let bill=0; bill<bills.length; bill++) {
+    tips.push(calcTip(bills[bill]));
+    let tip = tips[bill];
+    totals.push(tip + bills[bill]);
+}
+console.log(bills, tips, totals);
+
+// Bonus
+const calcAverage = (arr) => {
+    let average = 0;
+    for(let i=0; i<arr.length; i++) {
+        average += arr[i];
+    }
+    return average / arr.length;
+}
+
+console.log(`Average total bill: $${calcAverage(totals)}`)
