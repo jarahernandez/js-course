@@ -24,9 +24,11 @@ let highScore = Number(document.querySelector('.highscore').textContent);
 
 document.querySelector('.check').addEventListener('click', () => {
     const guess = Number(document.querySelector('.guess').value);
+    let gameMsg = document.querySelector('.message');
 
     if (!guess) {
-        document.querySelector('.message').textContent = '⛔ No number!';
+        // document.querySelector('.message').textContent = '⛔ No number!';
+        gameMsg.textContent = '⛔ No number!';
     } else if (guess > myNumber) {
         document.querySelector('.message').textContent = '☝ Too High!';
         currentScore--;
