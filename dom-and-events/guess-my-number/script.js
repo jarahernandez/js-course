@@ -1,5 +1,13 @@
 'use strict';
 
+/*
+Changes to implement:
+-> Extract a helper like displayMessage(msg)
+-> Prevent guesses outside 1–20
+-> Remove remaining inline querySelector calls
+-> Reset the button text only in one place
+*/
+
 const randomNumber = () => Math.floor(Math.random() * 20) + 1;
 
 let myNumber = randomNumber();
