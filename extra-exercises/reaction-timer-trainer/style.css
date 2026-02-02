@@ -10,22 +10,17 @@
 }
 
 .waiting {
-    background-color: #880808;
-    color: aliceblue;
-}
-
-.ready {
     background-color: #ffbf00;
     color: aliceblue;
 }
 
-.finished {
-    background-color: #222;
+.ready {
+    background-color: #2E8B57;
     color: aliceblue;
 }
 
-.failed {
-    background-color: #222;
+.finished {
+    background-color: #880808;
     color: aliceblue;
 }
 
@@ -41,11 +36,19 @@ main {
     font-size: 150px;
 }
 
+.timer {
+    display: flex;
+}
+
 .best-time {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 40px;
+}
+
+.record-time {
+    padding-left: 20px;
 }
 
 .controlers {
@@ -54,6 +57,17 @@ main {
 
 .btn {
     padding: 20px;
-    margin-inline: 80px;
+    margin-top: 80px;
+    margin-inline: 50px;
     font-size: 30px;
+    border-radius: 50px;
+}
+
+.instruction {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+
 }

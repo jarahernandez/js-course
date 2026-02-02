@@ -15,15 +15,20 @@
     <body class="idle">
         <main>
             <section class="timers">
-                <h1>0.0s</h1>
+                <div class="timer">
+                    <h1 class="current-time">0.0</h1>
+                    <h1>s</h1>
+                </div>
                 <div class="best-time">
                     <p>Best time:</p>
-                    <p>0.0s</p>
+                    <p class="record-time">0.0</p>
+                    <p>s</p>
                 </div>
             </section>
             <section class="controlers">
+                <p class="instruction hidden">Early start! Please reset to try again</p>
                 <button class="btn start">Start</button>
-                <button class="btn stop">Stop</button>
+                <button class="btn stop" disabled>Stop</button>
                 <button class="btn reset">Reset</button>
             </section>
         </main>
