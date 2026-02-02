@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.idle {
+    background-color: #222;
+    color: aliceblue;
+}
+
+.waiting {
+    background-color: #880808;
+    color: aliceblue;
+}
+
+.ready {
+    background-color: #ffbf00;
+    color: aliceblue;
+}
+
+.finished {
+    background-color: #222;
+    color: aliceblue;
+}
+
+.failed {
+    background-color: #222;
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timers {
+    margin: 50px;
+    font-size: 150px;
+}
+
+.best-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 40px;
+}
+
+.controlers {
+    margin: 50px;
+}
+
+.btn {
+    padding: 20px;
+    margin-inline: 80px;
+    font-size: 30px;
+}
