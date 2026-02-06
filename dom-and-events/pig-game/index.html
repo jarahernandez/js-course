@@ -8,11 +8,33 @@
     </head>
     <body>
         <main class="game-card">
-            <section>
-                <h1>player 1</h1>
+            <section class="players player-1">
+                <div class="total-score">
+                    <h1 class="p1-header active-player">PLAYER 1</h1>
+                    <p class="total-score-p1">0</p>
+                </div>
+                <div class="current-score">
+                    <p>CURRENT</p>
+                    <p class="current-score-p1">0</p>
+                </div>
             </section>
-            <section>
-                <h1>player 2</h1>
+            <section class="game-controls">
+                <button class="btn new-game">🔁 NEW GAME</button>
+                <div class="dice-container">
+                    <p class="dice">DICE</p>
+                </div>
+                <button class="btn roll-dice">🎲 ROLL DICE</button>
+                <button class="btn hold">🔻 HOLD</button>
+            </section>
+            <section class="players player-2">
+                <div class="total-score">
+                    <h1 class="p2-header">PLAYER 2</h1>
+                    <p class="total-score-p2">0</p>
+                </div>
+                <div class="current-score">
+                    <p>CURRENT</p>
+                    <p class="current-score-p2">0</p>
+                </div>
             </section>
         </main>
         <script src="script.js" defer></script>
