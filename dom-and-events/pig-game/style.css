@@ -10,6 +10,7 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* border: 2px solid aliceblue; */
@@ -17,13 +18,18 @@ body {
     color: aliceblue;
     width: 100%;
     height: 100%;
+    gap: 15px;
+    font-family: 'Ubuntu';
+    font-size: 30px;
 }
 
 .game-card {
     display: flex;
     gap: 100px;
-    padding: 50px;
+    justify-content: center;
+    padding: 100px;
     border: 2px solid aliceblue;
+    border-radius: 30px;
 }
 
 .game-controls {
@@ -31,13 +37,32 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-size: 20px;
+    /* justify-content: center; */
 }
 
 .players {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 150px;
+}
+
+.dice-container {
+    margin-block: 80px;
+}
+
+.dice-img {
+    width: 100px;
+    height: 100px;
+}
+
+.btn {
+    all: unset;
+    border: 2px solid aliceblue;
+    padding: 10px;
+    padding-inline: 30px;
+    border-radius: 50px;
 }
 
 /* working on these classes */
@@ -45,9 +70,9 @@ body {
     color: green;
 }
 
-.stand-by-player {
+/* .stand-by-player {
     color: aliceblue;
-}
+} */
 /* -------------------------- */
 
 .total-score {
@@ -57,11 +82,22 @@ body {
     gap: 10px;
 }
 
+.total-score-p1,
+.total-score-p2 {
+    font-size: 80px;
+}
+
 .current-score {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
+    padding-inline: 50px;
     border: 2px solid aliceblue;
+    border-radius: 30px;
+}
+
+.hidden {
+    display: none;
 }
