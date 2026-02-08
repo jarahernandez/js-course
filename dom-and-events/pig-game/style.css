@@ -13,9 +13,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid aliceblue; */
-    background: #222;
-    color: aliceblue;
+    background: #020024;
+    background: linear-gradient(
+        310deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    color: #020024;
     width: 100%;
     height: 100%;
     gap: 15px;
@@ -28,8 +33,8 @@ body {
     gap: 100px;
     justify-content: center;
     padding: 100px;
-    border: 2px solid aliceblue;
     border-radius: 30px;
+    background-color: rgb(184, 207, 228);
 }
 
 .game-controls {
@@ -38,7 +43,6 @@ body {
     align-items: center;
     justify-content: space-around;
     font-size: 20px;
-    /* justify-content: center; */
 }
 
 .players {
@@ -46,6 +50,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 150px;
+    /* opacity: 20%; */
 }
 
 .dice-container {
@@ -55,6 +60,7 @@ body {
 .dice-img {
     width: 100px;
     height: 100px;
+    border-radius: 10px;
 }
 
 .btn {
@@ -63,17 +69,16 @@ body {
     padding: 10px;
     padding-inline: 30px;
     border-radius: 50px;
+    background-color: white;
 }
 
-/* working on these classes */
-.active-player {
-    color: green;
+.active {
+    color: #090979;
 }
 
-/* .stand-by-player {
-    color: aliceblue;
-} */
-/* -------------------------- */
+.standby {
+    opacity: 50%;
+}
 
 .total-score {
     display: flex;
@@ -94,8 +99,13 @@ body {
     gap: 20px;
     padding: 20px;
     padding-inline: 50px;
-    border: 2px solid aliceblue;
     border-radius: 30px;
+    background-color: #090979;
+    color: white;
+}
+
+.winner {
+    color: white;
 }
 
 .hidden {
