@@ -12,6 +12,7 @@ let currentScore = 0;
 let playerScore1 = Number(totalScoreP1.textContent);
 let playerScore2 = Number(totalScoreP2.textContent);
 let winner = false;
+const winningScore = 100;
 
 // Buttons
 const newGameBtn = document.querySelector('.new-game');
@@ -42,34 +43,32 @@ const hold = () => {
         : (currentScoreP2.textContent = currentScore);
 };
 
-// ***************NEEDS FIXING****************************
-/*
-maybe:
-if turn of player 1 = true {
-    remove all classes and add active
-} else {
-    
-    }
-*/
 // Change visual on active player
 const changeActivePlayer = () => {
     playerTurn = !playerTurn;
-    playerInfo1.classList.toggle('active');
-    playerInfo2.classList.toggle('active');
-    playerInfo1.classList.toggle('standby');
-    playerInfo2.classList.toggle('standby');
+    if (playerTurn) {
+        playerInfo1.classList.remove('standby');
+        playerInfo1.classList.add('active');
+        playerInfo2.classList.remove('active');
+        playerInfo2.classList.add('standby');
+    } else {
+        playerInfo1.classList.remove('active');
+        playerInfo1.classList.add('standby');
+        playerInfo2.classList.remove('standby');
+        playerInfo2.classList.add('active');
+    }
 };
 
 // Win condition
 const checkWinner = () => {
     if (playerTurn) {
-        if (playerScore1 >= 10) {
+        if (playerScore1 >= winningScore) {
             winnerMsg.classList.remove('hidden');
             winnerMsg.textContent = 'WINNER: PLAYER 1';
             winner = true;
         }
     } else {
-        if (playerScore2 >= 10) {
+        if (playerScore2 >= winningScore) {
             winnerMsg.classList.remove('hidden');
             winnerMsg.textContent = 'WINNER: PLAYER 2';
             winner = true;
@@ -86,9 +85,11 @@ const newGame = () => {
     playerScore2 = 0;
     winner = false;
 
-    // Reset 'active player' to player 1
+    // Reset active player
+    playerInfo1.classList.remove('standby');
     playerInfo1.classList.add('active');
     playerInfo2.classList.remove('active');
+    playerInfo2.classList.add('standby');
 
     // Reset DOM
     totalScoreP1.textContent = 0;
