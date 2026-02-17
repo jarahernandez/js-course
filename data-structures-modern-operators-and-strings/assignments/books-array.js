@@ -1,6 +1,6 @@
 'use strict';
 
-const books = [
+export const books = [
     {
         title: 'Algorithms',
         author: ['Robert Sedgewick', 'Kevin Wayne'],
