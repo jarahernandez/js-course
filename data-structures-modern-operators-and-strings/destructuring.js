@@ -1,7 +1,7 @@
 'use strict';
 
 const restaurant = {
-    restName: 'Classico Italiano',
+    restName: 'Classico Italiano Restaurant',
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
