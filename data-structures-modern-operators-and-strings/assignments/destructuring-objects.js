@@ -2,8 +2,6 @@
 import { books } from './books-array.js';
 
 // 2.1: Destructure the first book object from the books array into variables called title, author and ISBN.
-// const [{ title, author, ISBN }] = books;
-// or
 const { title, author, ISBN } = books[0];
 // console.log(title, author, ISBN);
 
@@ -58,4 +56,5 @@ printBookInfo({
     author: 'Robert Sedgewick',
     year: '2011',
 });
+
 printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick' });
