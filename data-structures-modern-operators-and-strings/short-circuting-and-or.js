@@ -19,6 +19,15 @@ console.log(guest1);
 const guest2 = restaurant.numGuest || 10; // Won't work if restaurant.numGuest == 0
 console.log(guest2);
 
+// Nullish operator: null and undefined (NOT 0 or '')
+console.log('---------- ?? ----------');
+restaurant.numGuest = 0;
+const wrongGuest = restaurant.numGuest || 10;
+console.log(wrongGuest);
+
+const correctGuest = restaurant.numGuest ?? 10;
+console.log(correctGuest);
+
 // AND operator returns the first falsy value of all the operands or the last if all of them are truthy
 console.log('---------- AND ----------');
 console.log(0 && 'Edgar');
