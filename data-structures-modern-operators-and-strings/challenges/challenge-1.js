@@ -46,7 +46,7 @@ const game = {
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
 
-Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
+Suppose we get data from a web service about a certain game (above). In this challenge we're gonna work with the data. So here are your tasks:
 
 1. Create one player array for each team (variables 'players1' and 'players2')
 2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players
@@ -58,3 +58,38 @@ Suppose we get data from a web service about a certain game (below). In this cha
 
 TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 */
+
+// 1:
+const [players1, players2] = game.players;
+// console.log(players1, players2);
+
+// 2:
+const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
+
+// 3:
+const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// 4:
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log(players1Final);
+
+// 5:
+const { team1, x: draw, team2 } = game.odds;
+// console.log(team1, draw, team2);
+
+// 6:
+function printGoals(...playerNames) {
+    for (let i = 0; i < playerNames.length; i++) {
+        console.log(playerNames[i]);
+    }
+    console.log(`Total goals scored: ${playerNames.length}`);
+}
+
+// printGoals('Davis', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals(...game.scored);
+
+// 7:
+team1 < team2 && console.log(game.team1);
+team2 < team1 && console.log(game.team2);

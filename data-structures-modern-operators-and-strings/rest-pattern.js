@@ -55,17 +55,17 @@ const arr = [1, 2, ...[3, 4]];
 
 // Rest because it's on the LEFT of the '='
 const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// console.log(a, b, others);
 
 const [pizza, , risotto, ...otherFood] = [
     ...restaurant.mainMenu,
     ...restaurant.starterMenu,
 ];
-console.log(pizza, risotto, otherFood);
+// console.log(pizza, risotto, otherFood);
 
 // Objects
 const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// console.log(weekdays);
 
 // 2 - Functions
 const add = function (...numbers) {
@@ -73,12 +73,12 @@ const add = function (...numbers) {
     for (let i = 0; i < numbers.length; i++) sum += numbers[i];
     console.log(sum);
 };
-add(2, 3);
-add(5, 3, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4);
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
 
 const x = [23, 5, 7];
-add(...x);
+// add(...x);
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-restaurant.orderPizza('mushrooms');
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('mushrooms');
