@@ -2,7 +2,7 @@
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-const openingHours = {
+export const openingHours = {
     [weekdays[3]]: {
         open: 12,
         close: 22,
@@ -11,13 +11,13 @@ const openingHours = {
         open: 11,
         close: 23,
     },
-    [`day-${2 + 4}`]: {
+    [weekdays[5]]: {
         open: 0, // Open 24 hours
         close: 24,
     },
 };
 
-const restaurant = {
+export const restaurant = {
     restName: 'Classico Italiano',
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
