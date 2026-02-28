@@ -21,6 +21,8 @@ restaurant
     .set(true, 'We are open :D')
     .set(false, 'We are closed :(');
 
+// console.log(restaurant);
+
 // .get(key) to read data from a map
 // console.log(restaurant.get('restName')); // Pass the name of the key as parameter
 // console.log(restaurant.get(true));
@@ -44,7 +46,7 @@ restaurant.delete(2); // Pass key as parameter
 // console.log(restaurant.size);
 
 // .clear() to remove ALL elements from a map
-restaurant.clear();
+// restaurant.clear();
 // console.log(restaurant);
 
 // -------Using arrays and objects as map keys-------
@@ -57,7 +59,7 @@ restaurant.set([1, 2], 'Test');
 // console.log(restaurant.get([1, 2]));
 
 // Resetting map
-restaurant.clear();
+// restaurant.clear();
 
 // Solution
 // Here we create a variable to store an array and we use that variable to reference the same array in the .get()
@@ -66,7 +68,7 @@ restaurant.set(arr, 'Test');
 // console.log(restaurant.get(arr));
 
 // Resetting map
-restaurant.clear();
+// restaurant.clear();
 
 // ----Objects----
 // reference script in index.html
@@ -88,7 +90,7 @@ const question = new Map([
 // Convert object to map
 // console.log(Object.entries(openingHours));
 const hoursMap = new Map(Object.entries(openingHours));
-// console.log(hoursMap);
+console.log(hoursMap);
 
 // Iteration
 console.log(question.get('question'));

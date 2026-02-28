@@ -1,6 +1,6 @@
 'use strict';
 
-const game = {
+export const game = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
     players: [
@@ -91,5 +91,5 @@ function printGoals(...playerNames) {
 // printGoals(...game.scored);
 
 // 7:
-team1 < team2 && console.log(game.team1);
-team2 < team1 && console.log(game.team2);
+// team1 < team2 && console.log(game.team1);
+// team2 < team1 && console.log(game.team2);
