@@ -46,4 +46,9 @@ for (const [team, odd] of odds) {
     );
 }
 
-// Bonus: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Bonus:
+const scorers = {};
+for (const scorer of game.scored) {
+    scorers[scorer] ? scorers[scorer]++ : (scorers[scorer] = 1);
+}
+console.log(scorers);
